@@ -1,7 +1,7 @@
 const http = require("http");
 
 const PORT = 3000;
-let prestamos = [];
+let prestamos = [];  //Opté por un almacenamiento en memoria para simplicidad
 
 //headers de los Cors
 function setCorsHeaders(res) {
@@ -18,7 +18,7 @@ function sendJson(res, statusCode, data) {
 
 //validamos email
 function validarEmail(email) {
-  return email.includes("@") && email.includes(".");
+return email.includes("@") && email.includes(".");
 }
 
 //creamos el servidor
@@ -60,7 +60,6 @@ const server = http.createServer((req, res) => {
           if (data.observaciones && data.observaciones.length > 100) {
             return sendJson(res, 400, { error: "Las observaciones no  pueden superar los 100 caracteres" });
           }
-
           //guardamos el préstamo
           const nuevoPrestamo = {
             id: prestamos.length + 1,

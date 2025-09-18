@@ -45,7 +45,6 @@ git clone https://github.com/YonyChaparro/PRUEBA-DE-CONOCIMIENTOS-UIFCE.git
 
 2. Entrar al directorio del frontend
 
-```bash
 cd PRUEBA-DE-CONOCIMIENTOS-UIFCE/frontend
 
 3. Abrir `index.html` en el navegador (doble clic o abrir con el navegador).

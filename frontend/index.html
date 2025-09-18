@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Préstamos</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <canvas id="starry-sky-canvas"></canvas>
+  <h1 class="card animate__animated animate__fadeInDown">Gestión de Préstamos Unidad de Informática</h1>
+  <div class="main-container">
+
+    <section class="card animate__animated animate__fadeInLeft">
+      <h2>Registrar nuevo préstamo</h2>
+      <form id="prestamoForm" class="formulario">
+        
+        <label>Nombre del estudiante:</label>
+        <input type="text" id="nombre_estudiante" required>
+        <label>Código del estudiante (8 dígitos):</label>
+        <input type="text" id="codigo_estudiante" required pattern="\d{8}">
+        <label>Email:</label>
+        <input type="email" id="email" required>
+        <label>Artículo:</label>
+        <input type="text" id="articulo" required>
+        <label>Observaciones:</label>
+        <textarea id="observaciones" maxlength="100"></textarea>
+
+        <button type="submit" class="btn">Registrar préstamo</button>
+      </form>
+    </section>
+    <section class="card animate__animated animate__fadeInRight">
+      <h2>Listado de préstamos</h2>
+      <div class="prestamos" id="listaPrestamos"></div>
+    </section>
+  </div>
+  <div id="notification-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
